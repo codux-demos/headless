@@ -4,11 +4,12 @@ import icon from '../../../assets/edit.svg';
 import { DownloadOutlined } from '@ant-design/icons';
 import { Button, Divider, Radio, Space, Tooltip } from 'antd';
 import { useState } from 'react';
+import { SizeType } from 'antd/es/config-provider/SizeContext';
 
 export default createBoard({
     name: 'Button - Size',
     Board: () => {
-        const [size, setSize] = useState('large'); // default is 'middle'
+        const [size, setSize] = useState<SizeType>('large'); // default is 'middle'
 
         return (
             <div className={styles.section}>
