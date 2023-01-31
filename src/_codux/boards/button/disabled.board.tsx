@@ -75,17 +75,16 @@ export default createBoard({
                     </Space>
                 </Space>
                 <div>
-                    <Tooltip title="Edit this demo on GitHub!">
-                        <Divider orientation="left" orientationMargin="0">
+                    <Divider orientation="left" orientationMargin="0">
+                        <Tooltip title="Edit this demo on GitHub!">
                             <a
                                 className={styles.title}
                                 href="https://github.com/ant-design/ant-design/edit/master/components/button/demo/disabled.tsx"
                             >
                                 Disabled <img src={icon} />
                             </a>
-                        </Divider>
-                    </Tooltip>
-
+                        </Tooltip>
+                    </Divider>
                     <p>
                         To mark a button as disabled, add the <code>disabled</code> property to the{' '}
                         <code>Button</code>.

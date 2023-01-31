@@ -65,17 +65,16 @@ export default createBoard({
                 </Space>
 
                 <div>
-                    <Tooltip title="Edit this demo on GitHub!">
-                        <Divider orientation="left" orientationMargin="0">
+                    <Divider orientation="left" orientationMargin="0">
+                        <Tooltip title="Edit this demo on GitHub!">
                             <a
                                 className={styles.title}
                                 href="https://github.com/ant-design/ant-design/edit/master/components/button/demo/loading.tsx"
                             >
                                 Loading <img src={icon} />
                             </a>
-                        </Divider>
-                    </Tooltip>
-
+                        </Tooltip>
+                    </Divider>
                     <p>
                         A loading indicator can be added to a button by setting the loading {''}
                         <code>property</code> on the <code>Button</code>.

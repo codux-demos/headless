@@ -16,16 +16,16 @@ export default createBoard({
                     <Button type="link">Link Button</Button>
                 </Space>
                 <div>
-                    <Tooltip title="Edit this demo on GitHub!">
-                        <Divider orientation="left" orientationMargin="0">
+                    <Divider orientation="left" orientationMargin="0">
+                        <Tooltip title="Edit this demo on GitHub!">
                             <a
                                 className={styles.title}
                                 href="https://github.com/ant-design/ant-design/edit/master/components/button/demo/basic.tsx"
                             >
                                 Type <img src={icon} />
                             </a>
-                        </Divider>
-                    </Tooltip>
+                        </Tooltip>
+                    </Divider>
                     <p>
                         There are <code>primary</code> button, <code>default</code> button,{' '}
                         <code>dashed</code> button, <code>text</code> button and <code>link</code>{' '}

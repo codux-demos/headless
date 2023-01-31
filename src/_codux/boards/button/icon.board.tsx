@@ -40,16 +40,16 @@ export default createBoard({
                     </Space>
                 </Space>
                 <div>
-                    <Tooltip title="Edit this demo on GitHub!">
-                        <Divider orientation="left" orientationMargin="0">
+                    <Divider orientation="left" orientationMargin="0">
+                        <Tooltip title="Edit this demo on GitHub!">
                             <a
                                 className={styles.title}
                                 href="https://github.com/ant-design/ant-design/edit/master/components/button/demo/icon.tsx"
                             >
                                 Icon <img src={icon} />
                             </a>
-                        </Divider>
-                    </Tooltip>
+                        </Tooltip>
+                    </Divider>
                     <p>
                         <code>Button</code> components can contain an <code>Icon</code>. This is
                         done by setting the <code>icon</code>
