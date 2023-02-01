@@ -1,23 +1,28 @@
-import logo from './assets/logo.svg';
+import { Image, Divider, Row, Col } from 'antd';
 import styles from './App.module.scss';
 
 function App() {
     return (
         <div className={styles.App}>
-            <header className={styles['App-header']}>
-                <img src={logo} className={styles['App-logo']} alt="logo" />
+            <Image.PreviewGroup>
+                <Image
+                    width={200}
+                    preview={false}
+                    src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+                />
+                <Image
+                    width={200}
+                    preview={false}
+                    src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"
+                />
+            </Image.PreviewGroup>
+            <div className={styles.title}>
+                <Divider orientation="left">Components Overview</Divider>
                 <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
+                    <code>antd</code> provides plenty of UI components to enrich your web
+                    applications, and we will improve components experience consistently.
                 </p>
-                <a
-                    className={styles['App-link']}
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            </div>
         </div>
     );
 }
