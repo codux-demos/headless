@@ -1,6 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
 import styles from '../playground.board.module.scss';
-import icon from '../../../assets/edit.svg';
 import { DownloadOutlined } from '@ant-design/icons';
 import { Button, Divider, Radio, Space, Tooltip } from 'antd';
 import { useState } from 'react';
@@ -67,9 +66,7 @@ export default createBoard({
                             <a
                                 className={styles.title}
                                 href="https://github.com/ant-design/ant-design/edit/master/components/button/demo/size.tsx"
-                            >
-                                Size <img src={icon} />
-                            </a>
+                            ></a>
                         </Tooltip>
                     </Divider>
 
