@@ -66,7 +66,9 @@ export default createBoard({
                             <a
                                 className={styles.title}
                                 href="https://github.com/ant-design/ant-design/edit/master/components/button/demo/size.tsx"
-                            ></a>
+                            >
+                                Size
+                            </a>
                         </Tooltip>
                     </Divider>
 
