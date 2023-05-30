@@ -8,7 +8,7 @@ export default createBoard({
     Board: () => (
         <div className="wrapper">
             <Popover.Root>
-                <Popover.Trigger>
+                <Popover.Trigger asChild>
                     <button aria-label="Update dimensions" className="IconButton">
                         <MixerHorizontalIcon />
                     </button>
