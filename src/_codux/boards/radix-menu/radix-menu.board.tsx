@@ -4,12 +4,12 @@ import { MixerHorizontalIcon, Cross2Icon } from '@radix-ui/react-icons';
 import './popover.scss';
 
 export default createBoard({
-    name: 'Popover',
+    name: 'Popover - Radix',
     Board: () => (
         <div className="wrapper">
             <Popover.Root>
                 <Popover.Trigger>
-                    <button className="IconButton" aria-label="Update dimensions">
+                    <button aria-label="Update dimensions" className="IconButton">
                         <MixerHorizontalIcon />
                     </button>
                 </Popover.Trigger>

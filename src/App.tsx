@@ -1,4 +1,4 @@
-import { Image, Divider, Row, Col } from 'antd';
+import { Image, Divider } from 'antd';
 import styles from './App.module.scss';
 
 function App() {

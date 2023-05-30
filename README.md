@@ -3,14 +3,16 @@
     <h1 >Ant Design Playground by Codux</h1>
 </div>
 
-### A Visual IDE for React Projects
+# Examples: Headless Components
 
-Codux is an all-in-one visual development environment. Whether you’re starting a new app, creating components, or editing an existing project, every visual change you make reflects instantly in the code and vice versa. To learn more about Codux, visit our website - [https://www.codux.com/](https://www.codux.com/)
+This repo contains examples accompanying React Summit talk "Off with their head - The rise of the headless components" by Omry Nachman, CTO @codux
 
-### Take it for a Spin
+## How To Use
 
-This repo provides an interactive playground for [Ant Design](https://https://ant.design/components/overview/) React UI library. It's a great way to explore how the library and Codux work.
+You can check out the examples online at [https://www.codux.com/](https://www.codux.com/)
 
-- Learn how to edit, render and compose apps that make use of [Ant Design](https://https://ant.design/components/overview/) components.
-- Create React-based components with TypeScript support.
-- Visually edit in real-time and in an isolated environment.
+or [download codux](https://www.codux.com/download) and install codux, choose "Clone Git Repository" and use [this repo's url](https://github.com/codux-demos/headless.git)
+
+## Feedback
+
+Feedback will be greatly appreciated at our [discord server](https://discord.com/channels/1047628695675863150/1047629266227044483)

@@ -32,8 +32,8 @@ const items: MenuItem[] = [
             asItem(
                 'Group A',
                 null,
-                null,
-                [asItem('Option 1', '1'), asItem('Option 2', '2')],
+                <MailOutlined />,
+                [asItem('Option 1', '1', <MailOutlined />), asItem('Option 2', '2')],
                 'group'
             ),
             asItem(
@@ -61,7 +61,7 @@ const items: MenuItem[] = [
 ];
 
 export default createBoard({
-    name: 'AntDesignMenu',
+    name: 'Ant Design Menu',
     Board: () => <Menu style={{ width: 512 }} mode="horizontal" items={items} />,
     environmentProps: {
         canvasHeight: 145,
