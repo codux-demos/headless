@@ -1,12 +1,9 @@
-import React from "react";
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from "@ant-design/icons";
-import type { MenuProps } from "antd";
+import type { ItemType } from "antd/es/menu/hooks/useItems";
 import { Menu as AntMenu } from "antd";
 import "./style.css";
 
-type MenuItem = Required<MenuProps>["items"][number];
-
-const items: MenuItem[] = [
+const items: ItemType[] = [
     {
         label: "Navigation",
         key: "sub1",
