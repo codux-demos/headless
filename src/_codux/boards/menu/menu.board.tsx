@@ -3,7 +3,7 @@ import React from 'react';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
-import './style.css'
+import './style.css';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -24,27 +24,16 @@ function asItem(
 }
 
 const items: MenuItem[] = [
-    asItem(
-        'Navigation',
-        'sub1',
-        <MailOutlined />,
-        [
-            asItem(
-                'Group A',
-                null,
-                <MailOutlined />,
-                [asItem('Option 1', '1', <MailOutlined />), asItem('Option 2', '2')],
-                'group'
-            ),
-            asItem(
-                'Group B',
-                null,
-                null,
-                [asItem('Option 3', '3'), asItem('Option 4', '4')],
-                'group'
-            ),
-        ]
-    ),
+    asItem('Navigation', 'sub1', <MailOutlined />, [
+        asItem(
+            'Group A',
+            null,
+            <MailOutlined />,
+            [asItem('Option 1', '1', <MailOutlined />), asItem('Option 2', '2')],
+            'group'
+        ),
+        asItem('Group B', null, null, [asItem('Option 3', '3'), asItem('Option 4', '4')], 'group'),
+    ]),
 
     asItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
         asItem('Option 5', '5'),

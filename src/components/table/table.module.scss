@@ -1,0 +1,55 @@
+.tableContainer {
+  padding: 10px;
+  background: white;
+}
+
+.toggles {
+  display: flex;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.action {
+  background: none;
+  padding: 4px;
+  color: rebeccapurple;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.action:active {
+  background: #e7dbf2;
+}
+
+.table {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.headers {
+  text-transform: capitalize;
+  background: #efefef;
+}
+
+.header {
+  padding: 4px;
+  text-align: start;
+}
+
+.row:nth-child(even) {
+  background: #efefef;
+}
