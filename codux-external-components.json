@@ -339,35 +339,5 @@
         "name": "EditableProTable"
       }
     ]
-  },
-  {
-    "name": "@ant-design/pro-components",
-    "components": [
-      {
-        "filePath": "@ant-design/pro-components",
-        "exportName": "ProLayout",
-        "name": "ProLayout"
-      },
-      {
-        "filePath": "@ant-design/pro-components",
-        "exportName": "ProForm",
-        "name": "ProForm"
-      },
-      {
-        "filePath": "@ant-design/pro-components",
-        "exportName": "ProTable",
-        "name": "ProTable"
-      },
-      {
-        "filePath": "@ant-design/pro-components",
-        "exportName": "ProDescriptions",
-        "name": "ProDescriptions"
-      },
-      {
-        "filePath": "@ant-design/pro-components",
-        "exportName": "ProList",
-        "name": "ProList"
-      }
-    ]
   }
 ]
