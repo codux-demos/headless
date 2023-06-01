@@ -9,11 +9,12 @@ import {
     useReactTable,
 } from "@tanstack/react-table";
 import { makeData, Person } from "./makeData";
-import "./table.css";
+import styles from "./table.module.scss";
 
 const defaultColumns: ColumnDef<Person>[] = [
     {
-        header: "Name",
+        id: "name",
+        header: () => <span className={styles.header}>Name</span>,
         footer: (props) => props.column.id,
         columns: [
             {
@@ -25,7 +26,7 @@ const defaultColumns: ColumnDef<Person>[] = [
                 accessorFn: (row) => row.lastName,
                 id: "lastName",
                 cell: (info) => info.getValue(),
-                header: () => <span>Last Name</span>,
+                header: () => <span className={styles.header}>Last Name</span>,
                 footer: (props) => props.column.id,
             },
         ],
@@ -36,7 +37,7 @@ const defaultColumns: ColumnDef<Person>[] = [
         columns: [
             {
                 accessorKey: "age",
-                header: () => "Age",
+                header: () => <span className={styles.header}>Age</span>,
                 footer: (props) => props.column.id,
             },
             {
@@ -44,12 +45,12 @@ const defaultColumns: ColumnDef<Person>[] = [
                 columns: [
                     {
                         accessorKey: "visits",
-                        header: () => <span>Visits</span>,
+                        header: () => <span className={styles.header}>Visits</span>,
                         footer: (props) => props.column.id,
                     },
                     {
                         accessorKey: "status",
-                        header: "Status",
+                        header: () => <span className={styles.header}>Status</span>,
                         footer: (props) => props.column.id,
                     },
                     {
@@ -92,53 +93,42 @@ export function Table() {
     };
 
     return (
-        <div className="p-2">
-            <div className="inline-block border border-black shadow rounded">
-                <div className="px-1 border-b border-black">
-                    <label>
+        <div className={styles.tableContainer}>
+            <div className={styles.toggles}>
+                <label className={styles.toggle}>
+                    <input
+                        {...{
+                            type: "checkbox",
+                            checked: table.getIsAllColumnsVisible(),
+                            onChange: table.getToggleAllColumnsVisibilityHandler(),
+                        }}
+                    />
+                    Toggle All
+                </label>
+                {table.getAllLeafColumns().map((column) => (
+                    <label key={column.id} className={styles.toggle}>
                         <input
                             {...{
                                 type: "checkbox",
-                                checked: table.getIsAllColumnsVisible(),
-                                onChange: table.getToggleAllColumnsVisibilityHandler(),
+                                checked: column.getIsVisible(),
+                                onChange: column.getToggleVisibilityHandler(),
                             }}
                         />{" "}
-                        Toggle All
+                        {column.id}
                     </label>
-                </div>
-                {table.getAllLeafColumns().map((column) => {
-                    return (
-                        <div key={column.id} className="px-1">
-                            <label>
-                                <input
-                                    {...{
-                                        type: "checkbox",
-                                        checked: column.getIsVisible(),
-                                        onChange: column.getToggleVisibilityHandler(),
-                                    }}
-                                />{" "}
-                                {column.id}
-                            </label>
-                        </div>
-                    );
-                })}
+                ))}
             </div>
-            <div className="h-4" />
-            <div className="flex flex-wrap gap-2">
-                <button onClick={() => rerender()} className="border p-1">
-                    Regenerate
-                </button>
-                <button onClick={() => randomizeColumns()} className="border p-1">
-                    Shuffle Columns
-                </button>
-            </div>
-            <div className="h-4" />
-            <table>
-                <thead>
+
+            <table className={styles.table}>
+                <thead className={styles.headers}>
                     {table.getHeaderGroups().map((headerGroup) => (
                         <tr key={headerGroup.id}>
                             {headerGroup.headers.map((header) => (
-                                <th key={header.id} colSpan={header.colSpan}>
+                                <th
+                                    className={styles.header}
+                                    key={header.id}
+                                    colSpan={header.colSpan}
+                                >
                                     {header.isPlaceholder
                                         ? null
                                         : flexRender(
@@ -152,7 +142,7 @@ export function Table() {
                 </thead>
                 <tbody>
                     {table.getRowModel().rows.map((row) => (
-                        <tr key={row.id}>
+                        <tr className={styles.row} key={row.id}>
                             {row.getVisibleCells().map((cell) => (
                                 <td key={cell.id}>
                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -161,23 +151,15 @@ export function Table() {
                         </tr>
                     ))}
                 </tbody>
-                <tfoot>
-                    {table.getFooterGroups().map((footerGroup) => (
-                        <tr key={footerGroup.id}>
-                            {footerGroup.headers.map((header) => (
-                                <th key={header.id} colSpan={header.colSpan}>
-                                    {header.isPlaceholder
-                                        ? null
-                                        : flexRender(
-                                              header.column.columnDef.footer,
-                                              header.getContext()
-                                          )}
-                                </th>
-                            ))}
-                        </tr>
-                    ))}
-                </tfoot>
             </table>
+            <div className={styles.actions}>
+                <button className={styles.action} onClick={() => rerender()}>
+                    Regenerate
+                </button>
+                <button className={styles.action} onClick={() => randomizeColumns()}>
+                    Shuffle Columns
+                </button>
+            </div>
         </div>
     );
 }
