@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-export type Person = {
+export interface Person {
     firstName: string;
     lastName: string;
     age: number;
@@ -8,10 +8,10 @@ export type Person = {
     progress: number;
     status: "relationship" | "complicated" | "single";
     subRows?: Person[];
-};
+}
 
 const range = (len: number) => {
-    const arr = [];
+    const arr: number[] = [];
     for (let i = 0; i < len; i++) {
         arr.push(i);
     }
@@ -29,14 +29,14 @@ const newPerson = (): Person => {
             "relationship",
             "complicated",
             "single",
-        ])[0]!,
+        ])[0],
     };
 };
 
 export function makeData(...lens: number[]) {
     const makeDataLevel = (depth = 0): Person[] => {
-        const len = lens[depth]!;
-        return range(len).map((d): Person => {
+        const len = lens[depth];
+        return range(len).map((): Person => {
             return {
                 ...newPerson(),
                 subRows: lens[depth + 1] ? makeDataLevel(depth + 1) : undefined,

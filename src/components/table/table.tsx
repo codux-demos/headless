@@ -1,14 +1,13 @@
 import React from "react";
 import { faker } from "@faker-js/faker";
-
 import {
-    ColumnDef,
-    ColumnOrderState,
-    flexRender,
-    getCoreRowModel,
     useReactTable,
+    getCoreRowModel,
+    flexRender,
+    type ColumnDef,
+    type ColumnOrderState,
 } from "@tanstack/react-table";
-import { makeData, Person } from "./makeData";
+import { makeData, type Person } from "./makeData";
 import styles from "./table.module.scss";
 
 const defaultColumns: ColumnDef<Person>[] = [
@@ -97,22 +96,18 @@ export function Table() {
             <div className={styles.toggles}>
                 <label className={styles.toggle}>
                     <input
-                        {...{
-                            type: "checkbox",
-                            checked: table.getIsAllColumnsVisible(),
-                            onChange: table.getToggleAllColumnsVisibilityHandler(),
-                        }}
+                        type="checkbox"
+                        checked={table.getIsAllColumnsVisible()}
+                        onChange={table.getToggleAllColumnsVisibilityHandler()}
                     />
                     Toggle All
                 </label>
                 {table.getAllLeafColumns().map((column) => (
                     <label key={column.id} className={styles.toggle}>
                         <input
-                            {...{
-                                type: "checkbox",
-                                checked: column.getIsVisible(),
-                                onChange: column.getToggleVisibilityHandler(),
-                            }}
+                            type="checkbox"
+                            checked={column.getIsVisible()}
+                            onChange={column.getToggleVisibilityHandler()}
                         />{" "}
                         {column.id}
                     </label>

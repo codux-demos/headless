@@ -1,12 +1,16 @@
-import { useTooltipTriggerState, type TooltipTriggerState } from "react-stately";
-import { AriaTooltipProps, mergeProps, useTooltip, useTooltipTrigger } from "react-aria";
 import { ReactElement, useRef } from "react";
+import {
+    useTooltipTriggerState,
+    type TooltipTriggerProps,
+    type TooltipTriggerState,
+} from "react-stately";
+import { AriaTooltipProps, mergeProps, useTooltip, useTooltipTrigger } from "react-aria";
 
 export function Tooltip({
     state,
     ...props
 }: { state: TooltipTriggerState; children: ReactElement[] } & AriaTooltipProps) {
-    let { tooltipProps } = useTooltip(props, state);
+    const { tooltipProps } = useTooltip(props, state);
 
     return (
         <span
@@ -28,12 +32,15 @@ export function Tooltip({
     );
 }
 
-export function TooltipButton(props: any) {
-    let state = useTooltipTriggerState(props);
-    let ref = useRef(null);
+export interface TooltipButtonProps extends React.PropsWithChildren<TooltipTriggerProps> {
+    tooltip: React.ReactElement[];
+}
 
-    // Get props for the trigger and its tooltip
-    let { triggerProps, tooltipProps } = useTooltipTrigger(props, state, ref);
+export function TooltipButton(props: TooltipButtonProps) {
+    const state = useTooltipTriggerState(props);
+    const ref = useRef<HTMLButtonElement>(null);
+
+    const { triggerProps, tooltipProps } = useTooltipTrigger(props, state, ref);
 
     return (
         <span style={{ position: "relative" }}>

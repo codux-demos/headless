@@ -15,4 +15,4 @@ or [download codux](https://www.codux.com/download) and install codux, choose "C
 
 ## Feedback
 
-Feedback will be greatly appreciated at our [discord server](https://discord.com/channels/1047628695675863150/1078055547112263750)
+Feedback will be greatly appreciated at our [discord server](https://discord.com/channels/1047628695675863150/1078055547112263750).
