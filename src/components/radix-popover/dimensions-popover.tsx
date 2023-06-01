@@ -1,6 +1,9 @@
 import * as Popover from "@radix-ui/react-popover";
 import { MixerHorizontalIcon, Cross2Icon } from "@radix-ui/react-icons";
 import "./popover.scss";
+import "@radix-ui/colors/blackA.css";
+import "@radix-ui/colors/mauve.css";
+import "@radix-ui/colors/violet.css";
 
 export const Dimensions = () => (
     <Popover.Root>
