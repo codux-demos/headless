@@ -151,21 +151,15 @@ export function Table() {
                         </tr>
                     ))}
                 </tbody>
-                <tfoot className={styles.actions}>
-                    <tr>
-                        <td>
-                            <button className={styles.action} onClick={() => rerender()}>
-                                Regenerate
-                            </button>
-                        </td>
-                        <td>
-                            <button className={styles.action} onClick={() => randomizeColumns()}>
-                                Shuffle Columns
-                            </button>
-                        </td>
-                    </tr>
-                </tfoot>
             </table>
+            <div className={styles.actions}>
+                <button className={styles.action} onClick={() => rerender()}>
+                    Regenerate
+                </button>
+                <button className={styles.action} onClick={() => randomizeColumns()}>
+                    Shuffle Columns
+                </button>
+            </div>
         </div>
     );
 }

@@ -20,9 +20,11 @@
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  justify-content: center;
 }
 
 .action {
+  flex: 1;
   background: none;
   padding: 4px;
   color: rebeccapurple;
