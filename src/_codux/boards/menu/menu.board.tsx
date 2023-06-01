@@ -5,6 +5,9 @@ export default createBoard({
     name: "Ant Design Menu",
     Board: () => <Menu />,
     environmentProps: {
-        canvasHeight: 107,
+        canvasHeight: 407,
+        canvasWidth: 500,
+        windowWidth: 554,
+        windowHeight: 545,
     },
 });

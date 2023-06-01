@@ -64,13 +64,14 @@ const defaultColumns: ColumnDef<Person>[] = [
 ];
 
 export function Table() {
-    const [data, setData] = React.useState(() => makeData(20));
+    const size = 7;
+    const [data, setData] = React.useState(() => makeData(size));
     const [columns] = React.useState(() => [...defaultColumns]);
 
     const [columnVisibility, setColumnVisibility] = React.useState({});
     const [columnOrder, setColumnOrder] = React.useState<ColumnOrderState>([]);
 
-    const rerender = () => setData(() => makeData(20));
+    const rerender = () => setData(() => makeData(size));
 
     const table = useReactTable({
         data,

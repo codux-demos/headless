@@ -6,5 +6,7 @@ export default createBoard({
     Board: () => <SearchField label="Search" onSubmit={(text: string) => alert(text)} />,
     environmentProps: {
         canvasWidth: 254,
+        windowWidth: 412,
+        windowHeight: 300,
     },
 });

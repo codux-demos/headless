@@ -5,4 +5,8 @@ import "./style.css";
 export default createBoard({
     name: "React Table",
     Board: () => <Table />,
+    environmentProps: {
+        windowWidth: 644,
+        windowHeight: 320,
+    },
 });

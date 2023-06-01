@@ -2,7 +2,7 @@ import * as Popover from "@radix-ui/react-popover";
 import { MixerHorizontalIcon, Cross2Icon } from "@radix-ui/react-icons";
 import "./popover.scss";
 
-export const RadixMenu = () => (
+export const Dimensions = () => (
     <Popover.Root>
         <Popover.Trigger asChild>
             <button aria-label="Update dimensions" className="iconButton">
