@@ -15,7 +15,7 @@ function Button(props: AriaButtonProps<'button'>) {
     );
 }
 
-export function SearchField(props: { label: string }) {
+export function SearchField(props: { label: string, on }) {
     let { label } = props;
     let state = useSearchFieldState(props);
     let ref = useRef(null);
