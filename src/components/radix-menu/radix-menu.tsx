@@ -1,6 +1,6 @@
 import * as Popover from "@radix-ui/react-popover";
 import { MixerHorizontalIcon, Cross2Icon } from "@radix-ui/react-icons";
-import "./popover.css";
+import "./popover.scss";
 
 export const RadixMenu = () => (
     <Popover.Root>
