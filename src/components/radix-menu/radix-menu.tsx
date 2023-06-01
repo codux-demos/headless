@@ -1,6 +1,6 @@
-import * as Popover from '@radix-ui/react-popover';
-import { MixerHorizontalIcon, Cross2Icon } from '@radix-ui/react-icons';
-import './popover.css';
+import * as Popover from "@radix-ui/react-popover";
+import { MixerHorizontalIcon, Cross2Icon } from "@radix-ui/react-icons";
+import "./popover.css";
 
 export const Size = () => (
     <Popover.Root>
@@ -11,7 +11,7 @@ export const Size = () => (
         </Popover.Trigger>
         <Popover.Portal>
             <Popover.Content className="popoverContent" sideOffset={5}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                     <p className="text" style={{ marginBottom: 10 }}>
                         Dimensions
                     </p>

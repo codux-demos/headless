@@ -1,5 +1,5 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from "react";
+import { faker } from "@faker-js/faker";
 
 import {
     ColumnDef,
@@ -7,23 +7,23 @@ import {
     flexRender,
     getCoreRowModel,
     useReactTable,
-} from '@tanstack/react-table';
-import { makeData, Person } from './makeData';
-import './table.css';
+} from "@tanstack/react-table";
+import { makeData, Person } from "./makeData";
+import "./table.css";
 
 const defaultColumns: ColumnDef<Person>[] = [
     {
-        header: 'Name',
+        header: "Name",
         footer: (props) => props.column.id,
         columns: [
             {
-                accessorKey: 'firstName',
+                accessorKey: "firstName",
                 cell: (info) => info.getValue(),
                 footer: (props) => props.column.id,
             },
             {
                 accessorFn: (row) => row.lastName,
-                id: 'lastName',
+                id: "lastName",
                 cell: (info) => info.getValue(),
                 header: () => <span>Last Name</span>,
                 footer: (props) => props.column.id,
@@ -31,30 +31,30 @@ const defaultColumns: ColumnDef<Person>[] = [
         ],
     },
     {
-        header: 'Info',
+        header: "Info",
         footer: (props) => props.column.id,
         columns: [
             {
-                accessorKey: 'age',
-                header: () => 'Age',
+                accessorKey: "age",
+                header: () => "Age",
                 footer: (props) => props.column.id,
             },
             {
-                header: 'More Info',
+                header: "More Info",
                 columns: [
                     {
-                        accessorKey: 'visits',
+                        accessorKey: "visits",
                         header: () => <span>Visits</span>,
                         footer: (props) => props.column.id,
                     },
                     {
-                        accessorKey: 'status',
-                        header: 'Status',
+                        accessorKey: "status",
+                        header: "Status",
                         footer: (props) => props.column.id,
                     },
                     {
-                        accessorKey: 'progress',
-                        header: 'Profile Progress',
+                        accessorKey: "progress",
+                        header: "Profile Progress",
                         footer: (props) => props.column.id,
                     },
                 ],
@@ -98,11 +98,11 @@ export function Table() {
                     <label>
                         <input
                             {...{
-                                type: 'checkbox',
+                                type: "checkbox",
                                 checked: table.getIsAllColumnsVisible(),
                                 onChange: table.getToggleAllColumnsVisibilityHandler(),
                             }}
-                        />{' '}
+                        />{" "}
                         Toggle All
                     </label>
                 </div>
@@ -112,11 +112,11 @@ export function Table() {
                             <label>
                                 <input
                                     {...{
-                                        type: 'checkbox',
+                                        type: "checkbox",
                                         checked: column.getIsVisible(),
                                         onChange: column.getToggleVisibilityHandler(),
                                     }}
-                                />{' '}
+                                />{" "}
                                 {column.id}
                             </label>
                         </div>

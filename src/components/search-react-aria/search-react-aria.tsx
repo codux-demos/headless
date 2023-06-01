@@ -1,11 +1,11 @@
-import { useSearchFieldState } from 'react-stately';
-import { AriaButtonProps, useSearchField } from 'react-aria';
-import { useRef } from 'react';
-import './search.css';
+import { useSearchFieldState } from "react-stately";
+import { AriaButtonProps, useSearchField } from "react-aria";
+import { useRef } from "react";
+import "./search.css";
 
-import { useButton } from 'react-aria';
+import { useButton } from "react-aria";
 
-function Button(props: AriaButtonProps<'button'>) {
+function Button(props: AriaButtonProps<"button">) {
     let ref = useRef(null);
     let { buttonProps } = useButton(props, ref);
     return (
@@ -15,7 +15,7 @@ function Button(props: AriaButtonProps<'button'>) {
     );
 }
 
-export function SearchField(props: { label: string, on }) {
+export function SearchField(props: { label: string; on }) {
     let { label } = props;
     let state = useSearchFieldState(props);
     let ref = useRef(null);
@@ -26,7 +26,7 @@ export function SearchField(props: { label: string, on }) {
             <label {...labelProps}>{label}</label>
             <div>
                 <input {...inputProps} ref={ref} />
-                {state.value !== '' && <Button {...clearButtonProps}>❎</Button>}
+                {state.value !== "" && <Button {...clearButtonProps}>❎</Button>}
             </div>
         </div>
     );

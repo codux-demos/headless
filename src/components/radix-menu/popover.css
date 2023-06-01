@@ -1,6 +1,6 @@
-@use '@radix-ui/colors/blackA.css';
-@use '@radix-ui/colors/mauve.css';
-@use '@radix-ui/colors/violet.css';
+@use "@radix-ui/colors/blackA.css";
+@use "@radix-ui/colors/mauve.css";
+@use "@radix-ui/colors/violet.css";
 
 /* reset */
 button,
@@ -27,16 +27,16 @@ body {
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px,
     0 0 0 2px var(--violet7);
 }
-.popoverContent[data-state='open'][data-side='top'] {
+.popoverContent[data-state="open"][data-side="top"] {
   animation-name: slideDownAndFade;
 }
-.popoverContent[data-state='open'][data-side='right'] {
+.popoverContent[data-state="open"][data-side="right"] {
   animation-name: slideLeftAndFade;
 }
-.popoverContent[data-state='open'][data-side='bottom'] {
+.popoverContent[data-state="open"][data-side="bottom"] {
   animation-name: slideUpAndFade;
 }
-.popoverContent[data-state='open'][data-side='left'] {
+.popoverContent[data-state="open"][data-side="left"] {
   animation-name: slideRightAndFade;
 }
 

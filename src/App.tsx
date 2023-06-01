@@ -1,6 +1,6 @@
-import { Image, Divider } from 'antd';
-import styles from './App.module.scss';
-import { Menu } from './components/menu/menu';
+import { Image, Divider } from "antd";
+import styles from "./App.module.scss";
+import { Menu } from "./components/menu/menu";
 
 function App() {
     return (
