@@ -1,5 +1,6 @@
-import { Image, Divider } from 'antd';
-import styles from './App.module.scss';
+import { Image, Divider } from "antd";
+import styles from "./App.module.scss";
+import { Menu } from "./components/menu/menu";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"
                 />
             </Image.PreviewGroup>
+            <Menu />
             <div className={styles.title}>
                 <Divider orientation="left">Components Overview</Divider>
                 <p>

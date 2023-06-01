@@ -1,51 +1,54 @@
-import React from 'react';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
-import { Menu as Mn} from 'antd';
+import React from "react";
+import { AppstoreOutlined, MailOutlined, SettingOutlined } from "@ant-design/icons";
+import type { MenuProps } from "antd";
+import { Menu as AntMenu } from "antd";
+import "./style.css";
 
-type MenuItem = Required<MenuProps>['items'][number];
-
-function getItem(
-  label: React.ReactNode,
-  key?: React.Key | null,
-  icon?: React.ReactNode,
-  children?: MenuItem[],
-  type?: 'group',
-): MenuItem {
-  return {
-    key,
-    icon,
-    children,
-    label,
-    type,
-  } as MenuItem;
-}
+type MenuItem = Required<MenuProps>["items"][number];
 
 const items: MenuItem[] = [
-  getItem('Navigation One', 'sub1', <MailOutlined />, [
-    getItem('Item 1', null, <MailOutlined />, [getItem('Option 1', '1', <MailOutlined />), getItem('Option 2', '2')], 'group'),
-    getItem('Item 2', null, null, [getItem('Option 3', '3'), getItem('Option 4', '4')], 'group'),
-  ]),
+    {
+        label: "Navigation",
+        key: "sub1",
+        icon: <MailOutlined />,
+        children: [
+            {
+                label: "Group A",
+                type: "group",
+                children: [
+                    { label: "Option 1", key: "1" },
+                    { label: "Option 2", key: "2" },
+                ],
+            },
+            {
+                label: "Group B",
+                type: "group",
+                children: [
+                    { label: "Option 3", key: "3" },
+                    { label: "Option 4", key: "4" },
+                ],
+            },
+        ],
+    },
 
-  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
-    getItem('Option 5', '5'),
-    getItem('Option 6', '6'),
-    getItem('Submenu', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')]),
-  ]),
-
-  getItem('Navigation Three', 'sub4', <SettingOutlined />, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
-    getItem('Option 11', '11'),
-    getItem('Option 12', '12'),
-  ]),
+    {
+        label: "Navigation Two",
+        key: "sub2",
+        icon: <AppstoreOutlined />,
+        children: [
+            { label: "Option 5", key: "5" },
+            { label: "Option 6", key: "6" },
+        ],
+    },
+    {
+        label: "Navigation Three",
+        key: "sub4",
+        icon: <SettingOutlined />,
+        children: [
+            { label: "Option 9", key: "9" },
+            { label: "Option 10", key: "10" },
+        ],
+    },
 ];
 
-const onClick: MenuProps['onClick'] = (e) => {
-  console.log('click', e);
-};
-
-export const Menu = () => (
-  <Mn onClick={onClick} style={{ width: 256 }} mode="vertical" items={items} />
-);
-
+export const Menu = () => <AntMenu style={{ width: 512 }} mode="horizontal" items={items} />;
