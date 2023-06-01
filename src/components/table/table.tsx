@@ -102,7 +102,7 @@ export function Table() {
                             checked: table.getIsAllColumnsVisible(),
                             onChange: table.getToggleAllColumnsVisibilityHandler(),
                         }}
-                    />{" "}
+                    />
                     Toggle All
                 </label>
                 {table.getAllLeafColumns().map((column) => (
