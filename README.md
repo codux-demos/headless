@@ -20,5 +20,7 @@ Feedback will be greatly appreciated at our [discord server](https://discord.com
 ## Links
 
 [RadixUi](https://www.radix-ui.com/)
+
 [ReactAria](https://react-spectrum.adobe.com/react-aria/index.html)
+
 [ReactTable](https://tanstack.com/table/v8/docs/adapters/react-table)
