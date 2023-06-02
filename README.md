@@ -1,6 +1,6 @@
 <div align="center">  
     <img height="50"src="./src/assets/codux.svg"/>  
-    <h1 >Ant Design Playground by Codux</h1>
+    <h1 >Headless Component Playground by Codux</h1>
 </div>
 
 # Examples: Headless Components
