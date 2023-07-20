@@ -22,7 +22,7 @@ body {
 
 .popoverContent:focus {
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px,
-    0 0 0 2px var(--violet7);
+    0 0 0 2px var(--violet-7);
 }
 
 .popoverContent[data-state="open"][data-side="top"] {
@@ -53,18 +53,18 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--violet11);
+  color: var(--violet-11);
   position: absolute;
   top: 5px;
   right: 5px;
 }
 
 .popoverClose:hover {
-  background-color: var(--violet4);
+  background-color: var(--violet-4);
 }
 
 .popoverClose:focus {
-  box-shadow: 0 0 0 2px var(--violet7);
+  box-shadow: 0 0 0 2px var(--violet-7);
 }
 
 .iconButton {
@@ -75,13 +75,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--violet11);
+  color: var(--violet-11);
   background-color: white;
-  box-shadow: 0 2px 10px var(--blackA7);
+  box-shadow: 0 2px 10px var(--black-a7);
 }
 
 .iconButton:hover {
-  background-color: var(--violet3);
+  background-color: var(--violet-3);
 }
 
 .iconButton:focus {
@@ -96,7 +96,7 @@ body {
 
 .label {
   font-size: 13px;
-  color: var(--violet11);
+  color: var(--violet-11);
   width: 75px;
 }
 
@@ -110,18 +110,18 @@ body {
   padding: 0 10px;
   font-size: 13px;
   line-height: 1;
-  color: var(--violet11);
-  box-shadow: 0 0 0 1px var(--violet7);
+  color: var(--violet-11);
+  box-shadow: 0 0 0 1px var(--violet-7);
   height: 25px;
 }
 
 .input:focus {
-  box-shadow: 0 0 0 2px var(--violet8);
+  box-shadow: 0 0 0 2px var(--violet-8);
 }
 
 .text {
   margin: 0;
-  color: var(--mauve12);
+  color: var(--mauve-12);
   font-size: 15px;
   line-height: 19px;
   font-weight: 500;
