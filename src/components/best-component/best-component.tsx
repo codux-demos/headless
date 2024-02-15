@@ -2,8 +2,8 @@ import "./best-component.module.scss";
 
 export interface BestProps {
     className?: string;
-    spanClassName?: string;
-    children?: React.ReactNode;
+    innerClass?: string;
+    children?: string;
 }
 
 /**
