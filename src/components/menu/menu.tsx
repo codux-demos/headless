@@ -12,8 +12,9 @@ const items: ItemType[] = [
             {
                 label: "Group A",
                 type: "group",
+                icon: <MailOutlined />,
                 children: [
-                    { label: "Option 1", key: "1" },
+                    { icon: <MailOutlined />, label: "Option 1", key: "1" },
                     { label: "Option 2", key: "2" },
                 ],
             },

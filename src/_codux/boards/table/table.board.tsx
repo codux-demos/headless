@@ -6,7 +6,7 @@ export default createBoard({
     name: "React Table",
     Board: () => <Table />,
     environmentProps: {
-        windowWidth: 644,
-        windowHeight: 320,
+        windowWidth: 628,
+        windowHeight: 540,
     },
 });

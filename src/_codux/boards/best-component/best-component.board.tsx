@@ -5,7 +5,7 @@ import styles from "../../../components/best-component/best-component.module.scs
 export default createBoard({
     name: "Best Component Ever",
     Board: () => (
-        <BestComponent className={styles.outer} innerClass={styles.inner}>
+        <BestComponent className={styles.outer}>
             Encapsulation
         </BestComponent>
     ),
