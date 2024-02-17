@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import "./menu.out.css";
-import { cn } from "../../lib/utils";
+import { cn } from "utils";
 
 import {
     NavigationMenu,
