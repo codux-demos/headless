@@ -1,14 +1,14 @@
 import * as Popover from "@radix-ui/react-popover";
 import { MixerHorizontalIcon, Cross2Icon } from "@radix-ui/react-icons";
-import "./popover.scss";
 import "@radix-ui/colors/black-alpha.css";
 import "@radix-ui/colors/mauve.css";
 import "@radix-ui/colors/violet.css";
+import "./popover.scss";
 
 export const Dimensions = () => (
     <Popover.Root>
         <Popover.Trigger asChild>
-            <button aria-label="Update dimensions" className="iconButton">
+            <button aria-label="Update dimensions" className="iconButton bg-white">
                 <MixerHorizontalIcon />
             </button>
         </Popover.Trigger>
