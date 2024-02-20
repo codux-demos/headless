@@ -49,4 +49,4 @@ const items: ItemType[] = [
     },
 ];
 
-export const Menu = () => <AntMenu style={{ width: 512 }} mode="horizontal" items={items} />;
+export const Menu = () => <AntMenu style={{ width: "100%" }} mode="horizontal" items={items} />;
