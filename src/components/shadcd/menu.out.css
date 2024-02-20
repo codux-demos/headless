@@ -680,3 +680,7 @@ video {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
+body {
+  background-image: linear-gradient(330deg, hsl(120, 53%, 50%) 0%, hsl(184, 68%, 56%) 100%);
+}
